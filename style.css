@@ -23,13 +23,13 @@ a {
 /* =================== UTILITY CLASSES =================== */
 .container {
     max-width: 1200px;
-    /* width: 900px; */
+
     margin: auto;
 }
 
 .btn {
     display: inline-block;
-    padding: 1em 2.5em;
+    padding: 0.5em 1.5em;
     text-decoration: none;
     border-radius: 50px;
     cursor: pointer;
@@ -42,8 +42,12 @@ a {
 .btn-primary {
     color: #fff;
     background: #168083;
+    transition: all 0.2s;
 }
 
+.btn-primary:hover {
+    background: rgb(61, 141, 130);
+}
 
 
 
@@ -105,7 +109,6 @@ a {
 /* ================= SHOCASE STYLING ==================== */
 
 .showcase-area {
-    /* display: none; */
     height: 50vh;
     background: linear-gradient(rgba(240, 240, 240, 0.144), rgba(255, 255, 255, 0.336)), url("./img/header-image2.jpg");
     background-position: center;
@@ -567,40 +570,44 @@ a {
 
 
     /* ============== FOOD CATEGORY ================= */
-    .food-container{
+    .food-container {
         flex-direction: column;
         align-items: stretch;
     }
 
-    .food-type:not(:last-child){
+    .food-type:not(:last-child) {
         margin-bottom: 3rem;
     }
-    .food-type{
+
+    .food-type {
         box-shadow: 5px 5px 10px 0px #aaa;
     }
-    .img-container{
+
+    .img-container {
         margin: 0;
     }
 }
 
 
 /* =================== SMALLL SCREEN ===================== */
-@media (max-width: 500px)
-{
-    html{
+@media (max-width: 500px) {
+    html {
         font-size: 50%;
 
     }
-    .testimonial-container{
+
+    .testimonial-container {
         flex-direction: column;
         text-align: center;
-        /* background: #ddd; */
+
     }
-    .food-menu-item{
+
+    .food-menu-item {
         flex-direction: column;
         text-align: center;
     }
-    .food-menu-container img{
+
+    .food-menu-container img {
         margin: auto;
     }
 
@@ -610,12 +617,23 @@ a {
         width: 90%;
         text-align: center;
     }
-    .contect-container{
+
+    .contect-container {
         display: flex;
         flex-direction: column;
     }
-    .contact-image{
+
+    .contact-image {
         width: 90%;
         margin: 3rem auto;
+    }
+}
+
+
+/* ========== LANDCAPE MODE ============== */
+
+@media (orientation: landscape) and (max-height:500px) {
+    .showcase-area {
+        height: 50vmax;
     }
 }
